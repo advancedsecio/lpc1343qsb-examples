@@ -1,0 +1,14 @@
+PROJECT_BRIEF          =
+DOXYFILE_ENCODING      = UTF-8
+OUTPUT_LANGUAGE        = English
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        = ../
+RECURSIVE              = YES
+EXTRACT_PRIVATE        = YES           # クラスの private メンバを出力する
+EXTRACT_STATIC         = YES           # ファイルの static メンバを出力する
+OPTIMIZE_OUTPUT_FOR_C  = YES
+GENERATE_LATEX         = NO
+
+# Doxygen への入力ディレクトリまたは入力ファイル
+# 各サンプルプロジェクトのディレクトリからの相対パスで書く
+INPUT                  = ../common/ ./
