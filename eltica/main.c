@@ -19,15 +19,16 @@ int main(void)
     uint8_t led = 0;
 
     gpio_init();
-    gpio_set_dir(0, 7, 1);    /* GPIO0_7: LED 出力 */
+    gpio_set_dir(3, 0, 1);    /* GPIO3_0: LED 出力 */
+    gpio_write(3, 0, led);
 
     tmr32_init(TMRNO);
 
-    /* 500 ms 間隔で LED 出力を反転させる */
+    /* 1000 ms 間隔で LED 出力を反転させる */
     while (1) {
-        gpio_write(0, 7, led);
+        tmr32_delay_ms(TMRNO, 1000);
         led = !led;
-        tmr32_delay_ms(TMRNO, 500);
+        gpio_write(3, 0, led);
     }
 
     return 0;
