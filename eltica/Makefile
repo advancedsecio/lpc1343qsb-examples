@@ -14,7 +14,7 @@ LD = $(ARCH)-ld
 OBJCOPY = $(ARCH)-objcopy
 STRIP = $(ARCH)-strip
 SIZE = $(ARCH)-size
-CSUM = $(ROOT)/tools/lpcsum.sh
+CSUM = lpcrc
 
 CFLAGS = -Wall -march=armv7-m -mthumb -ffreestanding
 CFLAGS += -I. -I$(ROOT)/common/include
